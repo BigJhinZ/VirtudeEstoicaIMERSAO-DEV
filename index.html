@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtude Estoica - Cultivando a Sabedoria Interior</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <div class="container header-content">
+            <div class="header-image">
+                <img src="https://cdn.discordapp.com/attachments/1264803480338694256/1281117475244605511/stoic-8431544_1280-removebg-preview.png?ex=66da8d20&is=66d93ba0&hm=441b62c550f120e68a179431c62880a47cf1f2560f4c6befe7e6479ba965bf90&" alt="Filósofo Estoico" class="animate-float">
+            </div>
+            <div class="header-text">
+                <h1 class="animate-text">Virtude Estoica</h1>
+                <p class="tagline animate-text">Cultivando a Sabedoria Interior</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <form class="search-form">
+                <input type="text" placeholder="Busque por tópicos, livros ou categorias..." aria-label="Buscar">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="resultados-pesquisa">
+        </section>
+
+        <section class="stoic-journal">
+            <div class="journal-icon" id="journal-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="journal-popup" id="journal-popup">
+                <h2>Diário Estoico</h2>
+                <textarea id="journal-entry" placeholder="Reflita sobre sua jornada estoica hoje..."></textarea>
+                <button id="save-entry">Salvar Reflexão</button>
+                <div id="past-entries"></div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <blockquote id="stoic-quote">
+                "O homem que tem virtude está em harmonia consigo mesmo." - Marco Aurélio
+            </blockquote>
+            <button id="new-quote-btn">Nova Citação</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <!-- Adicione sua logo aqui -->
+                <!-- <img src="https://cdn.discordapp.com/attachments/1280713662595862529/1281022258764185683/estoico.png" alt="Virtude Estoica Logo" class="footer-img"> -->
+            </div>
+    
+            <nav class="footer-links">
+                <a href="#">Sobre</a>
+                <a href="#">Blog</a>
+                <a href="#">Contato</a>
+                <a href="#">Privacidade</a>
+            </nav>
+    
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtude Estoica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
