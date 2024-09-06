@@ -62,6 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const conceptItems = document.querySelectorAll('.conceito-item');
+
+  conceptItems.forEach(item => {
+    const header = item.querySelector('h3');
+    const content = item.querySelector('p');
+
+    header.addEventListener('click', () => {
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      header.classList.toggle('active');
+    });
+  });
+
   function filterResults(searchTerm) {
     return database.filter(item => 
       item.name.toLowerCase().includes(searchTerm) || 
@@ -74,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resultsContainer.innerHTML = '';
 
     if (items.length === 0) {
-      resultsContainer.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+      resultsContainer.innerHTML = '<p>Nenhum resultado encontrado. 😥</p>';
       return;
     }
 
