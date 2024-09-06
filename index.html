@@ -5,44 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtude Estoica - Cultivando a Sabedoria Interior</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
-    
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.2,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
     <header>
         <div class="container header-content">
             <div class="header-image">
-                <img src="https://cdn.discordapp.com/attachments/1264803480338694256/1281117475244605511/stoic-8431544_1280-removebg-preview.png?ex=66da8d20&is=66d93ba0&hm=441b62c550f120e68a179431c62880a47cf1f2560f4c6befe7e6479ba965bf90&" alt="Filósofo Estoico" class="animate-float">
+                <img src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode400/38282066/38282066-1698933975054-ecceed73cb3dd.jpg" alt="Filósofo Estoico" class="animate-float">
             </div>
             <div class="header-text">
-                <h1 class="animate-text">Virtude Estoica</h1>
+                <h1 id="virtude-estoica" class="animate-text">Virtude Estoica</h1>
                 <p class="tagline animate-text">Cultivando a Sabedoria Interior</p>
             </div>
         </div>
     </header>
 
+    <nav class="main-nav">
+        <div class="container">
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#filosofos">Filósofos</a></li>
+            <li><a href="#conceitos">Conceitos</a></li>
+            <li><a href="#praticas">Práticas</a></li>
+          </ul>
+        </div>
+      </nav>      
+
     <main class="container">
         <section class="search-section">
             <form class="search-form">
-                <input type="text" placeholder="Busque por tópicos, livros ou categorias..." aria-label="Buscar">
-                <button type="submit">Buscar</button>
+                <input type="text" placeholder="Busque por filósofos, conceitos ou práticas estoicas...">
+                <button type="submit"><i class="fas fa-search"></i> Buscar</button>
             </form>
         </section>
 
-        <section class="resultados-pesquisa">
+        <section class="resultados-pesquisa"></section>
+
+        <section id="sobre" class="content-section">
+            <h2>🗿 Sobre o Estoicismo</h2>
+            <p>O Estoicismo é uma escola filosófica helenística fundada em Atenas por Zenão de Cítio no início do século III a.C. Seu nome deriva da palavra grega "Stoa", que significa "pórtico", onde Zenão costumava ensinar.</p>
+            <p>Esta filosofia enfatiza a ética, a lógica e a física como meios para alcançar uma vida virtuosa, em harmonia com a natureza e a razão universal.</p>
         </section>
 
-        <section class="stoic-journal">
-            <div class="journal-icon" id="journal-icon">
-                <i class="fas fa-book"></i>
+        <section id="filosofos" class="content-section">
+            <h2>Filósofos Estoicos Notáveis</h2>
+            <div class="filosofos-grid">
+                <div class="filosofo-card">
+                    <img src="https://pbs.twimg.com/media/FtDXpJSX0BEPAdw.jpg" alt="Marco Aurélio">
+                    <h3>Marco Aurélio</h3>
+                    <p>Imperador romano e filósofo, autor de "Meditações".</p>
+                </div>
+                <div class="filosofo-card">
+                    <img src="data:image/jpeg;base64,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" alt="Epicteto">
+                    <h3>Epicteto</h3>
+                    <p>Ex-escravo e filósofo, conhecido por seu "Manual".</p>
+                </div>
+                <div class="filosofo-card">
+                    <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/ae80b89b-84d4-4c66-a300-ad3fe86f9bde/496e0252-fc53-4832-8b59-5510b1f5e762.png" alt="Sêneca">
+                    <h3>Sêneca</h3>
+                    <p>Estadista romano e prolífico escritor estoico.</p>
+                </div>
             </div>
-            <div class="journal-popup" id="journal-popup">
-                <h2>Diário Estoico</h2>
-                <textarea id="journal-entry" placeholder="Reflita sobre sua jornada estoica hoje..."></textarea>
-                <button id="save-entry">Salvar Reflexão</button>
-                <div id="past-entries"></div>
+        </section>
+
+        <section id="conceitos" class="content-section">
+            <h2>Conceitos Estoicos Fundamentais</h2>
+            <div class="conceitos-accordion">
+                <div class="conceito-item">
+                    <h3>Virtude <i class="fas fa-plus"></i></h3>
+                    <p> No estoicismo, a virtude é o bem supremo e é alcançada através da sabedoria, coragem, justiça e temperança. É viver em conformidade com a razão e a moralidade.</p>
+                </div>
+                <div class="conceito-item">
+                    <h3>Aceitação <i class="fas fa-plus"></i></h3>
+                    <p>Aceitar o que não podemos controlar é fundamental. Devemos focar apenas no que está dentro do nosso controle e aceitar com serenidade o resto, mantendo a paz interior.</p>
+                </div>
+                <div class="conceito-item">
+                    <h3>Razão <i class="fas fa-plus"></i></h3>
+                    <p>A razão é o que nos distingue e nos guia. Ela nos ajuda a distinguir o que está sob nosso controle do que não está e a viver de acordo com a natureza e a ética.</p>
+                </div>
+                <div class="conceito-item">
+                    <h3>Reflexão <i class="fas fa-plus"></i></h3>
+                    <p>É o exame regular dos próprios pensamentos e ações para viver de acordo com a razão e a virtude. Ajuda a melhorar o comportamento e a resposta às situações da vida.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="praticas" class="content-section">
+            <h2>Práticas Estoicas Diárias</h2>
+            <div class="praticas-carousel">
+                <div class="pratica-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Diário Matinal</h3>
+                    <p>Escreva suas intenções e prepare-se para os desafios do dia.</p>
+                </div>
+                <div class="pratica-card">
+                    <i class="fas fa-pause"></i>
+                    <h3>Pausa para Reflexão</h3>
+                    <p>Reserve momentos durante o dia para avaliar seus pensamentos e ações.</p>
+                </div>
+                <div class="pratica-card">
+                    <i class="fas fa-bed"></i>
+                    <h3>Revisão Noturna</h3>
+                    <p>Revise seu dia, aprendizados e áreas para melhorar.</p>
+                </div>
             </div>
         </section>
 
@@ -54,34 +230,43 @@
         </section>
     </main>
 
+    <div class="stoic-journal">
+        <div id="journal-icon" class="journal-icon">
+            <i class="fas fa-book"></i>
+        </div>
+        <div id="journal-popup" class="journal-popup">
+            <h2>Diário Estoico</h2>
+            <textarea id="journal-entry" placeholder="Reflexão do dia..."></textarea>
+            <button id="save-entry">Salvar Reflexão</button>
+            <div id="past-entries"></div>
+        </div>
+    </div>
+
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">
-                <!-- Adicione sua logo aqui -->
-                <!-- <img src="https://cdn.discordapp.com/attachments/1280713662595862529/1281022258764185683/estoico.png" alt="Virtude Estoica Logo" class="footer-img"> -->
+                <img src="https://cdn.discordapp.com/attachments/1266128505188651009/1281719285554610312/philosophy.png?ex=66dcbd9a&is=66db6c1a&hm=af0902f3a37b45cdad87fa5999432a85a32e42e734a2f9b4b499eb4fca4c5c5d&" alt="Logo Virtude Estoica">
             </div>
-    
-            <nav class="footer-links">
-                <a href="#">Sobre</a>
-                <a href="#">Blog</a>
-                <a href="#">Contato</a>
-                <a href="#">Privacidade</a>
-            </nav>
-    
+            <div class="footer-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#filosofos">Filósofos</a>
+                <a href="#conceitos">Conceitos</a>
+                <a href="#praticas">Práticas</a>
+            </div>
             <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-    
         <div class="footer-bottom">
-            <p>&copy; 2024 Virtude Estoica. Todos os direitos reservados.</p>
+            <p>© 2024 Virtude Estoica. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+    
 </body>
 </html>
