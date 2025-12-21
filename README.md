@@ -32,5 +32,4 @@ Link do Projeto: https://https://github.com/BigJhinZ/VirtudeEstoicaIMERSAO-DEV
 
 # Agradecimentos
 
-Imersão DEV &
-todos os filósofos estoicos que inspiraram este projeto
+Imersão DEV 
