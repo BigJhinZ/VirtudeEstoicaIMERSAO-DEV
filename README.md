@@ -27,7 +27,7 @@ Abra o arquivo index.html em seu navegador preferido.
 
 # Licença
 Contato
-Daniel Ribeiro Ataíde  - daniel.ataidde@outlook.com
+Daniel - daniel.ataidde@outlook.com
 Link do Projeto: https://https://github.com/BigJhinZ/VirtudeEstoicaIMERSAO-DEV
 
 # Agradecimentos
